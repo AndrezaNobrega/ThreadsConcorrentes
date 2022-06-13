@@ -1,23 +1,23 @@
 package geladeiraThreads;
-import java.util.Random;
 
-public class BebeLeite extends Thread{
+public class Monitora extends Thread {
     Geladeira geladeira;
+    String nome;
 
-    BebeLeite(Geladeira geladeira) {
+    Monitora(String nome, Geladeira geladeira) {
         this.geladeira = geladeira;
+        this.nome = nome;
     }
 
     @Override
     public void run() {
-        int valor = 0;
-        for(;;) {
-            valor = this.geladeira.beberLeite("Bebe-leite");	
+        for(;;) {          // CORRIGIR: deve ser while true
             try {
-                sleep(new Random().nextInt(1000));
+                sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            geladeira.comprarLeite(this.nome);
         }
     }
 }
