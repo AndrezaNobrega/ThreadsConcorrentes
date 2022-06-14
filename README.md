@@ -10,4 +10,4 @@ Portanto, para esse estudo criamos o objeto geladeira com a capacidade de 10 lit
 
 # Solução
 
- Para isso, como solução aplicamos 
+ Para isso, como solução aplicamos a classe semáforo
