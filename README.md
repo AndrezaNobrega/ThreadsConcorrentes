@@ -1,7 +1,7 @@
 
 <p align="center">
  <h2 align="center">Tratamento de região crítica com Threads</h2>
- <p align="center">Nessa atividade, temos uma atividade prática que objetiva a maior compreensão das threads, bem como a implementação do tratamento da região crítica. </p>
+ <p align="center">Nessa atividade, temos uma prática que objetiva a maior compreensão das threads, bem como a implementação do tratamento da região crítica. </p>
 </p>
 
 # Problema
