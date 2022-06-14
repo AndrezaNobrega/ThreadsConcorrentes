@@ -1,16 +1,21 @@
 package geladeiraThreads;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Geladeira {
     private int leite;
     private Semaforo cheio;
     private Semaforo vazio;
     private Semaforo mutex;
-    public Geladeira (int n) {
+    public Geladeira () {
         this.cheio = new Semaforo(0);
-        this.vazio = new Semaforo(1);
-        this.mutex = new Semaforo(n);
+        this.vazio = new Semaforo(10);
+        this.mutex = new Semaforo(1);
     }
+    
     public int beberLeite (String nome) {
+        
         cheio.obter();
         mutex.obter();
         
@@ -21,8 +26,11 @@ public class Geladeira {
         vazio.liberar();
         return this.leite;
     }
-    public void comprarLeite(String nome) {
-
+    public synchronized void comprarLeite(String nome) {
+        while (this.leite >= 10) {
+            cheio.obter();
+            mutex.obter();
+        }
         vazio.obter();
         mutex.obter();
 

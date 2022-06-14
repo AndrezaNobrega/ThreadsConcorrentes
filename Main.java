@@ -2,7 +2,7 @@ package geladeiraThreads;
 
 public class Main {
     public static void main(String[] args) {
-        Geladeira g = new Geladeira(1);
+        Geladeira g = new Geladeira();
         BebeLeite b = new BebeLeite(g);
         Monitora pai = new Monitora("Pai", g);
         Monitora mae = new Monitora("Mãe", g);
@@ -10,7 +10,7 @@ public class Main {
         
         b.start();
         pai.start();
-//        mae.start();
-//        tio.start();
+        mae.start();
+        tio.start();
     }
 }

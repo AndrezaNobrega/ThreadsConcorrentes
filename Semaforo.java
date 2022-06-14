@@ -26,6 +26,6 @@ public class Semaforo {
      */
     public synchronized void liberar(){
         contador++;
-        notify();       // acorda as threads em espera
+        notifyAll();       // acorda as threads em espera
     }
 }

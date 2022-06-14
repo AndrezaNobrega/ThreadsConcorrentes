@@ -11,12 +11,7 @@ public class Monitora extends Thread {
 
     @Override
     public void run() {
-        for(;;) {          // CORRIGIR: deve ser while true
-            try {
-                sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        for(;;) {
             geladeira.comprarLeite(this.nome);
         }
     }
