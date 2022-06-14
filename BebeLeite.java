@@ -14,7 +14,8 @@ public class BebeLeite extends Thread{
         for(;;) {
             valor = this.geladeira.beberLeite("Bebe-leite");	
             try {
-                sleep(new Random().nextInt(1000));
+                // dorme por tempo aleatório entre 0ms e 1 segundo
+                sleep(new Random().nextInt(1000));      
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
