@@ -12,6 +12,8 @@ Portanto, para esse estudo criamos o objeto geladeira com a capacidade de 10 lit
 
 Para isso, como solução aplicamos a classe semáforo com mutex. O qual uma técnica que utilizamos para controlar o acesso a recursos compartilhados. No caso, threads em concorrência. 
 
+#
+
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
