@@ -6,8 +6,8 @@
 
 # Problema
 
-Portanto, para esse estudo criamos o objeto geladeira com a capacidade de 10 litros de leite. Também, criamos uma thread BebeLeite, esta dorme por um tempo aleatório e ao acordar bebe um litro de leite. Ademais, temos as threads pai, mãe e tio as quais monitoram a geladeira e podem comprar mais leite.
+Portanto, para esse estudo criamos o objeto geladeira com a capacidade de 10 litros de leite. Também, criamos uma thread BebeLeite, esta dorme por um tempo aleatório e ao acordar bebe um litro de leite. Ademais, temos as threads pai, mãe e tio as quais monitoram a geladeira e podem comprar mais leite. No entanto, ao desenvolvermos o código de maneira mais simplória, sem um controle das threads, em nossos testes, a geladeira acabou passando dos 10 litros de leite que era a sua capacidade. Logo, foi-se necessária uma solução para esse problema.
 
 # Solução
 
-Para isso, como solução aplicamos a classe semáforo com mutex.
+Para isso, como solução aplicamos a classe semáforo com mutex. O qual uma técnica que utilizamos para controlar o acesso a recursos compartilhados. No caso, threads em concorrência. 
